@@ -1,0 +1,26 @@
+{
+  "name": "terrakit-starter",
+  "module": "index.ts",
+  "type": "commonjs",
+  "scripts": {
+    "get": "bunx cdktf-cli get",
+    "synth": "bunx cdktf-cli synth",
+    "deploy": "bunx cdktf-cli deploy",
+    "watch": "tsc -w",
+    "test": "bun test",
+    "test:watch": "bun test --watch"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "type-fest": "^4.33.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@cdktf/provider-azurerm": "13.17.0",
+    "cdktf": "^0.20.11",
+    "constructs": "^10.4.2",
+    "terrakit": "^0.1.1"
+  }
+}
