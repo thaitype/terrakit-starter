@@ -17,7 +17,7 @@ export interface MyTerrakitStackConfig {
 
 export const createController = (stack: TerrakitStack<MyTerrakitStackConfig>) => {
   return new TerrakitController(stack, stack.providers)
-    .resource({
+    .add({
       id: 'aaa1',
       type: ResourceGroup,
       config: ({ providers }) => ({
@@ -26,7 +26,7 @@ export const createController = (stack: TerrakitStack<MyTerrakitStackConfig>) =>
         location: 'eastus'
       }),
     })
-    .resource({
+    .add({
       id: 'aaa2',
       type: StorageAccount,
       config: ({ providers, outputs }) => ({
@@ -38,7 +38,7 @@ export const createController = (stack: TerrakitStack<MyTerrakitStackConfig>) =>
         accountTier: 'Standard'
       }),
     })
-    .resource({
+    .add({
       id: 'aaa3',
       if: stack.options.identifier.env === 'prod',
       type: StorageAccount,
@@ -51,7 +51,7 @@ export const createController = (stack: TerrakitStack<MyTerrakitStackConfig>) =>
         accountTier: 'Standard'
       }),
     })
-    .resource({
+    .add({
       id: 'aaa4',
       type: StorageAccount,
       config: ({ providers, outputs }) => ({

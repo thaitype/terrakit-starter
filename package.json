@@ -21,6 +21,6 @@
     "@cdktf/provider-azurerm": "13.17.0",
     "cdktf": "^0.20.11",
     "constructs": "^10.4.2",
-    "terrakit": "^0.1.1"
+    "terrakit": "^0.4.0"
   }
 }
